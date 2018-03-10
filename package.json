@@ -1,0 +1,9 @@
+{
+  "name": "_fw-css",
+  "version": "1.0.0",
+  "description": "Micro-Framework CSS",
+  "main": "index.js",
+  "repository": "https://github.com/elliotcln/fw-css.git",
+  "author": "Elliot Collin <elliot.cln@gmail.com>",
+  "license": "MIT"
+}
