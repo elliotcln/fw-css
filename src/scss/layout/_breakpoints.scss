@@ -1,0 +1,12 @@
+/**
+Name: Breakpoints
+*/
+
+@mixin breakpoint($point) {
+   @if $point == tablet {
+     @media (min-width: var(--tablet)) { @content ; }
+  }
+   @else if $point == desktop {
+     @media (min-width: var(--desktop)) { @content ; }
+  }
+}

@@ -1,0 +1,88 @@
+/**
+Name: Helpers
+*/
+
+$pt-md-max: 10;
+
+$aligns: center, right, left;
+@each $align in $aligns {
+	.text-#{$align} { text-align: $align;}
+}
+
+/* Padding (left, right, top, bottom)
+Only on tablet and desktop
+------------ */
+$pads: (
+	l: left,
+	r: right,
+	t: top,
+	b: bottom
+);
+
+@each $side, $pad in $pads {
+	@for $i from 1 through $pt-md-max {
+		.p#{$side}-#{$i} {
+			padding-#{$pad}: $i+rem !important;
+		}
+	}
+}
+
+// Medium viewport
+@include breakpoint(tablet){
+	@each $side, $pad in $pads {
+		@for $i from 1 through $pt-md-max {
+			.p#{$side}-#{$i}-medium {
+				padding-#{$pad}: $i+rem !important;
+			}
+		}
+	}
+}
+
+/* Margin (left, right, top, bottom)
+Only on tablet and desktop
+------------ */
+$margs: (
+	l: left,
+	r: right,
+	t: top,
+	b: bottom
+);
+
+@each $side, $marg in $margs {
+	@for $i from 1 through $pt-md-max {
+		.m#{$side}-#{$i} {
+			margin-#{$marg}: $i+rem !important;
+		}
+	}
+}
+
+// Medium viewport
+@include breakpoint(tablet){
+	@each $side, $marg in $margs {
+		@for $i from 1 through $pt-md-max {
+			.m#{$side}-#{$i}-medium {
+				margin-#{$marg}: $i+rem !important;
+			}
+		}
+	}
+}
+
+/* Viewport size helpers
+-------------------------- */
+.vw100 { width: 100vw !important; }
+.vh100 { height: 100vh !important; }
+
+
+/* Responsive helpers
+------------------------ */
+.hidden-phone { display: none; }
+.hidden-desktop { display: block; }
+
+@include breakpoint(tablet) {
+	.hidden-phone { display: block; }
+	.hidden-tablet { display: none; }
+}
+@include breakpoint(desktop) {
+	.hidden-tablet { display: block; }
+	.hidden-desktop { display: none; }
+}

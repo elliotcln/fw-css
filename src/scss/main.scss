@@ -4,7 +4,10 @@ Author: Elliot COLLIN <elliot.cln@gmail.com>
 Version: 0.0.1
 */
 
+@import '../css/variables.css';
 @import "reset";
 
 // Layout
+@import "layout/breakpoints";
+@import "layout/helpers";
 @import "layout/containers";

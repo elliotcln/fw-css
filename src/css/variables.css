@@ -17,9 +17,14 @@
   /* Document variables */
   --font-family: 'Source Sans Pro', sans-serif;
   --font-size: 1.4rem; /* 14px */
+  --line-height: 1.6;
+  --font-weight: 300;
 
 
   /* Layout variables */
+  --tablet: 76.8rem; /* 768px */
+  --desktop: 10.24rem; /* 1024px */
+
   --container: 110rem; /* 1100px */
-  --max-container: 95%;
+  --max-container: calc(100% - 4rem);
 }

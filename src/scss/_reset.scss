@@ -2,6 +2,8 @@
 Name: CSS Reset
 */
 
+* { box-sizing: border-box; }
+
 html {
   font-size: 62.5%;
   font-size: calc(1em * 0.625); /* IE fix */
@@ -15,4 +17,6 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   color: var(--dark);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
 }
