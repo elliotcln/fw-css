@@ -3,5 +3,23 @@
 **/
 
 :root {
+  /* Basics */
+  --white: #ffffff;
+  --light: #E9F1F7;
+  --dark: #1B2432;
+
+  /* Main colors */
   --main: #6c38da;
+  --secondary: #EE4266;
+  --third: #F9A03F;
+
+
+  /* Document variables */
+  --font-family: 'Source Sans Pro', sans-serif;
+  --font-size: 1.4rem; /* 14px */
+
+
+  /* Layout variables */
+  --container: 110rem; /* 1100px */
+  --max-container: 95%;
 }

@@ -1,0 +1,17 @@
+/**
+Name: Containers
+*/
+
+.container, .container--fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  width: var(--container);
+  max-width: var(--max-container);
+}
+
+.container--fluid {
+  width: var(--max-container);
+}

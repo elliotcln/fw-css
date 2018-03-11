@@ -1,3 +1,10 @@
-body {
-  background: var(--main);
-}
+/**
+Name: CSS Micro-Framework
+Author: Elliot COLLIN <elliot.cln@gmail.com>
+Version: 0.0.1
+*/
+
+@import "reset";
+
+// Layout
+@import "layout/containers";

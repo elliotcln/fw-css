@@ -1,2 +1,34 @@
+/**
+Name: CSS Micro-Framework
+Author: Elliot COLLIN <elliot.cln@gmail.com>
+Version: 0.0.1
+*/
+/**
+Name: CSS Reset
+*/
+html {
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625);
+  /* IE fix */ }
+
 body {
-  background: var(--main); }
+  padding: 0;
+  margin: 0;
+  background-color: var(--white);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--dark); }
+
+/**
+Name: Containers
+*/
+.container, .container--fluid {
+  margin-left: auto;
+  margin-right: auto; }
+
+.container {
+  width: var(--container);
+  max-width: var(--max-container); }
+
+.container--fluid {
+  width: var(--max-container); }
