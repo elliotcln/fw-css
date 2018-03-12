@@ -7,6 +7,7 @@
   "author": "Elliot Collin <elliot.cln@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "dripicons": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cssnano": "^2.1.2",

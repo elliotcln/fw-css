@@ -2,6 +2,7 @@
 Name: Helpers
 */
 
+
 $pt-md-max: 10;
 
 $aligns: center, right, left;
@@ -31,7 +32,7 @@ $pads: (
 @include breakpoint(tablet){
 	@each $side, $pad in $pads {
 		@for $i from 1 through $pt-md-max {
-			.p#{$side}-#{$i}-medium {
+			.p#{$side}-#{$i}-tablet {
 				padding-#{$pad}: $i+rem !important;
 			}
 		}
@@ -60,7 +61,7 @@ $margs: (
 @include breakpoint(tablet){
 	@each $side, $marg in $margs {
 		@for $i from 1 through $pt-md-max {
-			.m#{$side}-#{$i}-medium {
+			.m#{$side}-#{$i}-tablet {
 				margin-#{$marg}: $i+rem !important;
 			}
 		}

@@ -2,7 +2,10 @@
 var path = {
 	css: 'src/css/',
 	scss: 'src/scss/',
-	dist: 'dist/'
+	fonts: 'src/fonts/',
+	dist: 'dist/',
+	node: 'node_modules/',
+	dripicons: 'dripicons/webfont/'
 }
 
 // Requires
@@ -33,8 +36,23 @@ gulp.task('prod', ['css-prod'], function(){
 	.pipe(gulp.dest(path.dist + 'css'));
 });
 
+gulp.task('webfonts-css', function(){
+	return gulp.src(path.node + path.dripicons + 'webfont.css')
+		.pipe($.rename({
+			prefix: '_',
+			extname: '.scss'
+		}))
+		.pipe(gulp.dest(path.scss + 'layout'));
+});
+
+gulp.task('webfonts', ['webfonts-css'], function(){
+	return gulp.src(path.node + path.dripicons + 'fonts/*')
+		.pipe(gulp.dest(path.fonts + 'dripicons'));
+});
+
 gulp.task('default', ['scss'], function(){});
 
 gulp.task('watch', function(){
 	gulp.watch(path.scss + '**/*.scss', ['scss']);
+	gulp.watch(path.node + path.dripicons, ['webfonts']);
 });
